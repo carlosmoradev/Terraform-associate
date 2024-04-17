@@ -9,7 +9,7 @@ terraform {
 
 provider "aws" {
   # Configuration options
-  profile = "purplelab-dev"
+  profile = "tf-demo"
   region = "us-east-2"
 }
 
@@ -18,12 +18,6 @@ resource "aws_instance" "TF-demo" {
   instance_type = "t2.nano"
 
   tags = {
-    name = "connexa-poc-connector"
-    vanta-owner = "carlos.mora@sourcemeridian.com"
-    vanta-description = "POC process for conexxa vpn"
-    vanta-team = "platform"
-    pl-products = "platform-monitoring"
-    vanta-no-alert = "True"
-    pl-environment = "develop"
+    name = "tf-demo"
   }
 }
